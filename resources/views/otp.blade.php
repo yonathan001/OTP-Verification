@@ -108,7 +108,7 @@
                 <input type="text" id="otp" name="otp" placeholder="Enter OTP" required>
             </div>
             <div class="form-group">
-                <button type="submit">Verify OTP</button>
+                <button type="submit">Verify</button>
             </div>
         </form>
 

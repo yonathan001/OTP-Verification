@@ -4,9 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\OtpController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 Route::get('/otp', function () {
     return view('otp');
 });

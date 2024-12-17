@@ -6,90 +6,110 @@
     <title>Email OTP Verification</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
-        
         body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a; 
-            color: #e0e0e0; 
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
         }
+    
         .container {
-            background-color: #2a2a2a; 
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             max-width: 400px;
             width: 100%;
-            position: relative; 
+            transition: all 0.3s ease;
         }
+    
+        .container:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+    
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
+    
         .form-group label {
             display: block;
-            margin-bottom: 5px;
-            color: #f0f0f0; 
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
         }
+    
         .form-group input {
             width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-            border: 1px solid #444; 
-            border-radius: 4px;
-            background-color: #3a3a3a; 
-            color: #e0e0e0; 
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background-color: #fafafa;
+            color: #333;
+            font-size: 14px;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
         }
+    
         .form-group input::placeholder {
-            color: #a0a0a0; 
+            color: #bbb;
         }
+    
+        .form-group input:focus {
+            border-color: #007bff;
+            background-color: #fff;
+            outline: none;
+        }
+    
         .form-group button {
             width: 100%;
-            padding: 10px;
-            background-color: #007bff; 
+            padding: 14px;
+            background-color: #007bff;
             border: none;
             color: white;
             font-size: 16px;
             cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
         }
+    
         .form-group button:hover {
             background-color: #0056b3;
         }
+    
         .message {
-            margin-top: 15px;
-            padding: 10px;
-            border-radius: 4px;
+            margin-top: 20px;
+            padding: 14px;
+            border-radius: 20px;
             text-align: center;
-            display: none;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
         }
+    
         .message.success {
-            background-color: #2e7d32; 
-            color: #ffffff; 
+            background-color: #28a745;
+            color: white;
         }
+    
         .message.error {
-            background-color: #c62828; 
-            color: #ffffff; 
+            background-color: #dc3545;
+            color: white;
         }
-        
+    
         .footer {
-            font-size: 12px; 
-            color: rgba(255, 255, 255, 0.5); 
+            font-size: 12px;
+            color: #aaa;
             text-align: center;
-            position: absolute; 
-            bottom: 10px; 
-            left: 50%; 
-            transform: translateX(-50%); 
+            margin-top: 20px;
         }
     </style>
+    
 </head>
 <body>
     <div class="container">
-        <h4>OTP_TEST_LARAVEL</h4>
+        <h4></h4>
         <!-- Form to send OTP -->
         <form id="sendOtpForm">
             <div class="form-group">

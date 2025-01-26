@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email OTP Verification</title>
+    <title>Email OTP Verifications</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
         body {
@@ -113,7 +113,7 @@
         <!-- Form to send OTP -->
         <form id="sendOtpForm">
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">Your Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
